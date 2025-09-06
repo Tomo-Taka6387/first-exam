@@ -1,0 +1,201 @@
+.sell-page {
+    max-width: 800px;
+    margin: auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 10px;
+}
+
+.sell-page_title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 24px;
+}
+
+.sell-page_form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.sell-img_title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.sell-img_outer {
+    border: 1px dashed #5F5F5F;
+    max-width: 680px;
+    height: 150px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.sell-img_box {
+    padding: 10px 20px;
+    background: white;
+    color: #FF5555;
+    font-weight: bold;
+    border: 2px bold #FF5555;
+    border-radius: 6px;
+    cursor: pointer;
+    display: inline-block;
+    text-align: center;
+}
+
+.sell-form_subtitle {
+    position: relative;
+    display: inline-block;
+    height: 48px;
+    width: 680px;
+    margin-bottom: 50px;
+    font-size: 30px;
+    font-weight: bold;
+    color: #5F5F5F;
+    border-bottom: 1px solid #5F5F5F;
+}
+
+.category-button-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.category_radio {
+    display: none;
+}
+.category_btn {
+    background-color: #FFFFFF;
+    color: #FF5555;
+    border: 1px solid #FF5555;
+    margin: 10px;
+    padding:  6px 15px;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 18px;
+    display: inline-block;
+}
+.category_radio:checked + .category_btn {
+    background-color: #FF5555;
+    color: #FFFFFF;
+}
+
+.category_title {
+    font-size: 24px;
+    font-style: bold;
+    color: #000000;
+    margin: 20px 0px;
+}
+
+.sell-form__label {
+    font-weight: bold;
+    font-size: 24px;
+    margin-bottom: 5px;
+    display: block;
+}
+.sell-form_condition {
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background: url("data:image/svg+xml;utf8,<svg fill='black' height='40' viewBox='0 0 24 24' width='30' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/></svg>") no-repeat right 10px center;
+    background-color: #fff;
+    border: 1.5px solid #B1B1B1;
+    padding: 10px;
+    padding-right: 40px;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+    width: 680px;
+}
+
+.sell-form__input,
+.sell-form__input select {
+    width: 680px;
+    padding: 10px;
+    border: 1px solid #5F5F5F;
+    font-size: 16px;
+}
+.sell-form__textarea {
+    height: 125px;
+    width: 680px;
+    padding: 10px;
+    border: 1px solid #5F5F5F;
+    font-size: 16px;
+}
+.price-input_wrapper {
+    position: relative;
+    max-width: 680px;
+}
+.price-input {
+    width: 100%;
+    padding-left: 2em;
+}
+.yen {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: #000000;
+    pointer-events: none;
+}
+
+.sell-form__error-message {
+    color: red;
+    font-size: 20px;
+    margin-top: 4px;
+}
+
+.sell-form_btn {
+    width: 680px;
+    height: 60px;
+    padding: 8px 16px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    background-color: #FF5555;
+    color: white;
+    font-size: 26px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+
+@media screen and (min-width: 1400px) and (max-width: 1540px) {
+    .sell-page {
+        max-width: 1000px;
+        padding: 40px;
+    }
+
+    .sell-page_title {
+        font-size: 42px;
+    }
+
+    .sell-form_subtitle {
+        font-size: 32px;
+        width: 800px;
+    }
+
+    .sell-form__label,
+    .category_title {
+        font-size: 26px;
+    }
+
+    .sell-img_outer {
+        max-width: 800px;
+        height: 180px;
+    }
+
+    .sell-form_condition,
+    .sell-form__input,
+    .sell-form__textarea {
+        width: 800px;
+        font-size: 18px;
+    }
+
+    .sell-form_btn {
+        width: 800px;
+        height: 70px;
+        font-size: 28px;
+    }
+}

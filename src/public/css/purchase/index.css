@@ -1,0 +1,98 @@
+.item-toggle {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #ddd;
+    padding: 50px 150px 10px;
+}
+
+.tab {
+    color: #000000;
+    font-size: 24px;
+    font-weight: bold;
+    white-space: nowrap;
+    text-decoration: none;
+    display: inline-block;
+    text-align: center;
+    list-style: 40px;
+    margin: 0;
+}
+
+.tab.active {
+    color: #FF5555;
+}
+.item-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+.item-image {
+    width: 100%;
+    height: 290px;
+    border-radius: 4px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.item-box {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+
+.item-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.item-card {
+    width: 290px;
+    overflow: hidden;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.item-name {
+    font-size: 20px;
+    margin-top: 8px;
+    color: #000000;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    line-height: 1.2;
+    text-align: left;
+    text-decoration: none;
+}
+.item-title {
+        margin-bottom: 60px;
+}
+@media screen and (min-width: 1400px) and (max-width: 1540px) {
+    .tab {
+        font-size: 26px;
+        margin-left: 0;
+    }
+
+    .item-list {
+        gap: 30px;
+        margin-top: 30px;
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    .item-card {
+        width: 300px;
+    }
+
+    .item-name {
+        font-size: 22px;
+    }
+}

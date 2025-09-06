@@ -1,0 +1,179 @@
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding: 20px;
+    background-color: #000000;
+    gap: 20px;
+}
+.header_img {
+    width: 370px;
+    height: 36px;
+    flex-shrink: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+.header_buttons {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 100%;
+}
+.search-form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 20px;
+    flex-grow: 1;
+}
+
+.search-form_input {
+    max-width: 500px;
+    width: 100%;
+    height: 50px;
+    padding: 8px 16px;
+    font-size: 24px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    background-color: #FFFFFF;
+    color: #000000;
+    border: 1px solid #fff;
+}
+.header_links {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+}
+.login-btn,
+.logout_btn,
+.mypage_btn {
+    min-width: 135px;
+    white-space: nowrap;
+    height: 47px;
+    text-decoration: none;
+    color: #FFFFFF;
+    padding: 8px 16px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+.sell_btn {
+    width: 100px;
+    height: 50px;
+    background-color: #FFFFFF;
+    color: #000000;
+    border: none;
+    border-radius: 6px;
+    padding: 8px 16px;
+    font-size: 24px;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+@media screen and (max-width: 850px) and (min-width: 768px) {
+    .header-img {
+        width: 160px;
+        height: 28px;
+    }
+
+    .search-form_input {
+        font-size: 18px;
+    }
+
+    .logout_btn,
+    .mypage_btn,
+    sell_btn {
+        font-size: 18px;
+        height: 45px;
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .header_links {
+        flex-direction: column;
+        align-items: stretch;
+        gap:  8px;
+        width: 100%;
+}
+    .header_img {
+        width: 180px;
+        justify-content: center;
+    }
+
+    .header_buttons {
+        flex-direction: column;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .search-form {
+        width: 100%;
+    }
+
+    .search-form_input {
+        width: 100%;
+        font-size: 18px;
+        height: 42px;
+    }
+
+    .header_links {
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+    }
+
+    .logout_btn,
+    .mypage_btn,
+    .sell_btn {
+        width: 100%;
+        font-size: 18px;
+        height: 42px;
+    }
+
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1540px) {
+    .header {
+        padding: 25px 50px;
+        gap: 30px;
+    }
+
+    .header_img {
+        width: 400px;
+        height: 40px;
+    }
+
+    .header_buttons {
+        gap: 30px;
+    }
+
+    .search-form_input {
+        max-width: 600px;
+        height: 55px;
+        font-size: 26px;
+    }
+
+    .login-btn,
+    .logout_btn,
+    .mypage_btn {
+        min-width: 150px;
+        height: 50px;
+        font-size: 26px;
+    }
+
+    .sell_btn {
+        width: 120px;
+        height: 55px;
+        font-size: 26px;
+    }
+}
+

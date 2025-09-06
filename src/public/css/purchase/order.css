@@ -1,0 +1,159 @@
+.order-box {
+    max-width: 1000px;
+    margin: 50px auto;
+}
+
+.order-page_form {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    align-items: flex-start;
+}
+
+.order-left {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.order-right {
+    flex: 0 0 300px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.product-row {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.order-item_img {
+    width: 177.5px;
+    height: 177.5px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-title {
+    font-size: 30px;
+    color: #000000;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.order-price {
+    font-size: 30px;
+    color: #000000;
+}
+
+.order-form select {
+    color: #000000;
+    margin-top: 10px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+
+.address-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+
+.order-address {
+    font-size: 20px;
+    font-weight: semi bold;
+    padding: 10px;
+    display: flex;
+    color: #000000;
+    flex-direction: column;
+}
+
+.address-change_btn {
+    font-size: 20px;
+    color: #0073CC;
+    text-decoration: none;
+}
+
+.order-information {
+    padding: 20px;
+}
+
+.information-box {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 12px;
+    font-size: 15px;
+}
+.order-error {
+    color: #FF5555;
+    font-size: 16px;
+}
+.order-btn {
+    width: 440px;
+    height: 60px;
+    padding: 12px;
+    height: 60px;
+    background: #FF5555;
+    color: #FFFFFF;
+    font-size: 26px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+.order-btn:hover {
+    background: #e84118;
+}
+
+@media screen and (min-width: 1400px) and (max-width: 1540px) {
+    .order-box {
+        max-width: 1200px;
+        margin: 60px auto;
+    }
+
+    .order-right {
+        flex: 0 0 360px;
+    }
+
+    .order-item_img {
+        width: 220px;
+        height: 220px;
+    }
+
+    .form-title {
+        font-size: 34px;
+    }
+
+    .order-price {
+        font-size: 34px;
+    }
+
+    .order-address {
+        font-size: 22px;
+    }
+
+    .address-change_btn {
+        font-size: 22px;
+    }
+
+    .information-box {
+        font-size: 18px;
+    }
+
+    .order-btn {
+        width: 500px;
+        height: 70px;
+        font-size: 28px;
+    }
+}
