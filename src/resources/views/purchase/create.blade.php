@@ -8,7 +8,7 @@
 @section('content')
 <div class="item-container">
     <div class="item-image">
-        <img class="create-form_img" src="{{ asset('storage/' . $item->img_url) }}" alt="{{ $item->name }}">
+        <img class="create-form_img" src="{{ $item->img_url }}" alt="{{ $item->name }}">
     </div>
     <div class="item-detail">
         <h2 class="item-name">{{ $item->name }}</h2>

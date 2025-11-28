@@ -57,4 +57,9 @@ class Item extends Model
     {
         return $this->soldItem()->exists();
     }
+
+    public function trades()
+    {
+        return $this->hasMany(Trade::class);
+    }
 }

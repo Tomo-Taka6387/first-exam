@@ -71,7 +71,7 @@ class FortifyServiceProvider extends ServiceProvider
         \Event::listen(
             Authenticated::class,
             function ($event) {
-                session()->put('url.intended', '/');
+                session()->put('url.intended', '/attendance');
             });
     }
 }

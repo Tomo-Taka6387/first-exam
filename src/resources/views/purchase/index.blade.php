@@ -21,11 +21,11 @@
             <div class="item-card">
                 @if(!$item->soldItem)
                 <a href="{{ route('items.show', $item->id) }}" class="item-link">
-                    <div class="item-image" style="background-image: url('{{ asset('storage/' . $item->img_url) }}')"></div>
+                    <div class="item-image" style="background-image: url('{{ $item->img_url }}')"></div>
                     <span class="item-name">{{ $item->name }}</span>
                 </a>
                 @else
-                <div class="item-image" style="background-image: url('{{ asset('storage/' . $item->img_url) }}')"></div>
+                <div class="item-image" style="background-image: url('{{ $item->img_url }}')"></div>
                 <div class="item-title">
                     <span class="item-name">{{ $item->name }}</span>
                     <span class="sold-label">SOLD</span>
@@ -40,14 +40,14 @@
             @foreach($likedItems as $item)
             <div class="item-card">
                 @if($item->soldItem)
-                <div class="item-image" style="background-image: url('{{ asset('storage/' . $item->img_url) }}')"></div>
+                <div class="item-image" style="background-image: url('{{ $item->img_url }}')"></div>
                 <div class="item-title">
                     <span class="item-name">{{ $item->name }}</span>
                     <span class="sold-label">SOLD</span>
                 </div>
                 @else
                 <a href="{{ route('items.show', $item->id) }}" class="item-link">
-                    <div class="item-image" style="background-image: url('{{ asset('storage/' . $item->img_url) }}')"></div>
+                    <div class="item-image" style="background-image: url('{{ $item->img_url }}')"></div>
                     <span class="item-name">{{ $item->name }}</span>
                 </a>
                 @endif

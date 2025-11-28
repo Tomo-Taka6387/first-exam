@@ -20,6 +20,8 @@ class DatabaseSeeder extends Seeder
             ProfileSeeder::class,
             ItemTableSeeder::class,
             LikeTableSeeder::class,
+            TradeSeeder::class,
+            TradeMessageSeeder::class,
         ]);
     }
 }

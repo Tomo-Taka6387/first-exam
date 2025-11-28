@@ -162,8 +162,8 @@ class UserController extends Controller
         $mode = $request->input('mode', 'register');
 
         return $request->input('mode') === 'register'
-            ? redirect('/')          // 新規登録後はトップへ
-            : redirect()->route('mypage'); // 編集後はマイページへ
+            ? redirect('/')
+            : redirect()->route('mypage');
 
     }
 
