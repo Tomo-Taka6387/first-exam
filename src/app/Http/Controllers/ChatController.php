@@ -151,10 +151,10 @@ class ChatController extends Controller
 
     public function saveDraft(Request $request, $tradeId)
     {
-        $drafts = session('chat_drafts', []);   // すでに保存されたドラフト一覧を取得
-        $drafts[$tradeId] = $request->message;  // この取引IDのドラフトを保存
+        $drafts = session('chat_drafts', []);
+        $drafts[$tradeId] = $request->message;
 
-        session(['chat_drafts' => $drafts]);    // 上書き保存
+        session(['chat_drafts' => $drafts]);
 
         return response()->json(['status' => 'ok']);
     }

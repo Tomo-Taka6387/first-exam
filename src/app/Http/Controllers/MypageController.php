@@ -33,7 +33,6 @@ class MypageController extends Controller
             ->whereIn('status', ['chatting', 'completed'])
             ->get()
             ->sortByDesc(function ($trade) {
-                // 最新メッセージの created_at を取得
                 $lastMessageTime = $trade->messages->last()->created_at ?? null;
 
                 return $lastMessageTime ?? $trade->updated_at;

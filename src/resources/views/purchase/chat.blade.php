@@ -20,8 +20,6 @@
     </div>
 
     <div class="right-container">
-
-        {{-- 上部：相手プロフィール --}}
         <div class="user-information">
 
             @php
@@ -185,7 +183,6 @@
 
         const input = document.getElementById("message");
 
-        // 入力中の内容を1秒ごとに保存
         let timer;
         input.addEventListener("input", function() {
             clearTimeout(timer);

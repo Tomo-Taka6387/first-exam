@@ -10,10 +10,9 @@
 
     <div class="profile-header">
 
-        <!-- 左：画像 -->
+
         <img class="profile-image" src="{{ asset('storage/' . $profile->img_url) }}">
 
-        <!-- 中央：名前＋星 -->
         <div class="profile-info">
             <h2 class="profile-name">{{ $user->name }}</h2>
 
@@ -24,7 +23,6 @@
             </div>
         </div>
 
-        <!-- 右：ボタン -->
         <a href="{{ route('mypage.edit') }}" class="edit-button">プロフィール編集</a>
 
     </div>
