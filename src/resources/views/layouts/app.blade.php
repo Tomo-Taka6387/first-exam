@@ -14,7 +14,7 @@
     <div class="app">
         <header class="header">
             <div class="header_img">
-                <img src="{{ asset('storage/images/logo.svg') }}" alt="ロゴ画像">
+                <img src="{{ asset('icons/logo.svg') }}" alt="ロゴ画像">
             </div>
             <div class="header_buttons">
                 <form class="search-form" method="GET" action="{{ route('index') }}">

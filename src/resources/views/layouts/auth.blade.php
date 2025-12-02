@@ -14,7 +14,7 @@
     <div class="auth-wrapper">
         <header class="header">
             <div class="header_img">
-                <img src="{{ asset('storage/images/logo.svg') }}" alt="ロゴ画像">
+                <img class="header_img_logo" src="{{ asset('icons/logo.svg') }}" alt="ロゴ画像">
             </div>
             @yield('link')
         </header>

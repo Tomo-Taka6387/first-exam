@@ -23,13 +23,12 @@
         <div class="user-information">
 
             @php
-            $partnerImg = optional($partner->profile)->img_url
-            ? asset('storage/' . $partner->profile->img_url)
-            : null;
+            $raw = optional(optional($partner)->profile)->img_url;
+            $partnerImg = $raw ? asset('storage/' . ltrim($raw, '/')) : null;
             @endphp
 
             @if ($partnerImg)
-            <img class="profile-image" src="{{ $partnerImg }}">
+            <img class="profile-image" src="{{ $partnerImg }}" alt="プロフィール画像">
             @else
             <div class="profile-image no-image"></div>
             @endif
@@ -59,23 +58,27 @@
             @foreach($trade->messages as $message)
             <div class="chat-message {{ $message->sender_id == auth()->id() ? 'my-message' : 'other-message' }}">
 
-                <div class="{{ $message->sender_id == auth()->id() ? 'my-chat-header' : 'other-chat-header' }}">
+                <div class="chat-header {{ $message->sender_id == auth()->id() ? 'my-chat-header' : 'other-chat-header' }}">
                     @php
-                    $img = optional(optional($message->sender)->profile)->img_url;
-                    $imgUrl = $img ? asset('storage/' . $img) : null;
+                    $raw = optional(optional($message->sender)->profile)->img_url;
+                    $imgUrl = $raw ? asset('storage/' . ltrim($raw, '/')) : null;
                     @endphp
+
+
 
                     @if($imgUrl)
                     <img class="chat-user-image" src="{{ $imgUrl }}" alt="ユーザー画像">
                     @else
                     <div class="chat-user-placeholder"></div>
                     @endif
+
                     <span class="chat-username">
                         {{ $message->sender_id == auth()->id() ? auth()->user()->name : $message->sender->name }}
                     </span>
                 </div>
 
                 <div class="chat-content">
+
                     @if(request('edit') == $message->id && $message->sender_id == auth()->id())
                     <form action="{{ route('chat.update', $message->id) }}" method="post">
                         @csrf
@@ -87,13 +90,27 @@
                         </div>
                     </form>
                     @else
+
                     @if($message->message)
                     <p class="message-text">{{ $message->message }}</p>
                     @endif
 
+
+                    @if($message->img_path)
+                    <img
+                        src="{{ asset('storage/' . $message->img_path) }}"
+                        class="chat-image"
+                        alt="送信画像">
+                    @endif
+
                     @if($message->sender_id == auth()->id())
                     <div class="chat-actions">
-                        <a class="chat-edit" href="{{ route('chat.show', ['trade' => $trade->id, 'edit' => $message->id]) }}">編集</a>
+                        <a class="chat-edit"
+                            href="{{ route('chat.show', $trade->id) }}?edit={{ $message->id }}">
+                            編集
+                        </a>
+
+
                         <form action="{{ route('chat.destroy', $message->id) }}" method="post">
                             @csrf
                             @method('DELETE')
@@ -103,8 +120,10 @@
                     @endif
                     @endif
                 </div>
+
             </div>
             @endforeach
+
         </div>
 
         <form action="{{ route('chat.store', $trade->id) }}" method="post" enctype="multipart/form-data">
@@ -117,7 +136,7 @@
                     <label for="img_url" class="custom-file-label">画像を追加</label>
                     <input class="input-file" type="file" name="img_url" id="img_url" accept="image/*">
                 </div>
-                <button class="send-button" type="submit"></button>
+                <button class="send-button" type="submit"><img class="send_img" src="{{ asset('icons/sendicon.jpg') }}" alt="画像"></button>
             </div>
             <p class="chat-form__error-message">
                 @error('message'){{ $message }}@enderror

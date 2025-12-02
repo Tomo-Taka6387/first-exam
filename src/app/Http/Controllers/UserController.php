@@ -76,7 +76,7 @@ class UserController extends Controller
 
         if ($request->hasFile('img_url')) {
             $path = $request->file('img_url')->store('profile_images', 'public');
-            $profile->img_url = basename($path);
+            $profile->img_url = $path;
         }
 
         $profile->save();
